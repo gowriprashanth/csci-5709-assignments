@@ -10,36 +10,7 @@
 
 ## Getting Started
 
-* *Deployment URL*: 
-
-### Prerequisites
-
-To have a local copy of this lab / assingnment / project up and running on your local machine, you will first need to install the following software / libraries / plug-ins
-
-```
-Give examples or provide a list of the required software / libraries / plug-ins
-
-```
-
-See the following section for detailed step-by-step instructions on how to install this software / libraries / plug-ins
-
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be, assume the marker just acquired a computer
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-End with an example of getting some data out of the system or using it for a little demo. You may also include a quick example of what the marker should see if the installation of all required software / libraries / plug-ins was successful.
+* *Deployment URL*:  <https://65c438dbf245b41a398ecc45--eclectic-sprite-ce8841.netlify.app/>
 
 ## Built With
 
@@ -50,57 +21,115 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Sources Used
 
-If in completing your lab / assignment / project you used any interpretation of someone else's code, then provide a list of where the code was implemented, how it was implemented, why it was implemented, and how it was modified. See the sections below for more details.
+### File Name - Ticket.js
 
-
-### File Name
-
-*Lines ## - ##*
+*Lines 30 - 37*
 
 ```
-Copy and paste your code on lines mentioned 
-
-```
-
-The code above was created by adapting the code in [NAME](link) as shown below: 
-
-```
-Copy and paste the snippet of code you are referencing
+toast.success('Ticket successfully assigned!', {
+      position: 'top-right',
+      autoClose: 3000, 
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+    });
+  };
 
 ```
 
-- <!---How---> The code in [NAME](link) was implemented by...
-- <!---Why---> [NAME](link)'s Code was used because...
-- <!---How---> [NAME](link)'s Code was modified by...
-
-*Repeat as needed*
-
-
-### File Name
-
-*Lines ## - ##*
+The code above was created by adapting the code in [Logrocket](https://blog.logrocket.com/using-react-toastify-style-toast-messages/) as shown below: 
 
 ```
-Copy and paste your code on lines mentioned 
+toast("This is a custom toast Notification!", {
+  position: toast.POSITION.BOTTOM_LEFT,
+  className: "toast-message",
+});
 
 ```
 
-The code above was created by adapting the code in [NAME](link) as shown below: 
+*Lines 39 - 74*
 
 ```
-Copy and paste the snippet of code you are referencing
+return (
+    <div className="ticket card m-3 p-3"> {}
+      <h3 className="mb-3"> {name}</h3>
+      <p>Ticket ID: {id}</p>
+      {category === 'Unassigned' && asignee === 'none' ? (
+        <>
+          <p>
+            Category:
+            {isEditing ? (
+              <select className="form-select" value={selectedCategory} onChange={handleCategoryChange}>
+                <option value="Unassigned">Unassigned</option>
+                <option value="Category 1">Category 1</option>
+                <option value="Category 2">Category 2</option>
+              </select>
+            ) : (
+              selectedCategory
+            )}
+          </p>
+          <p>
+            Assignee:
+            {isEditing ? (
+              <select className="form-select" value={selectedAssignee} onChange={handleAssigneeChange}>
+                <option value="none">none</option>
+                <option value="Assignee 1">Assignee 1</option>
+                <option value="Assignee 2">Assignee 2</option>
+              </select>
+            ) : (
+              selectedAssignee
+            )}
+          </p>
+          {isEditing ? (
+            <button className="btn btn-primary" onClick={handleSave}>Save</button>
+          ) : (
+            <button className="btn btn-secondary" onClick={() => setIsEditing(true)}>Edit</button>
+          )}
+        </>
 
 ```
 
-- <!---How---> The code in [NAME](link) was implemented by...
-- <!---Why---> [NAME](link)'s Code was used because...
-- <!---How---> [NAME](link)'s Code was modified by...
+The code above was created by adapting the code in [Logrocket](https://blog.logrocket.com/using-bootstrap-react-tutorial-examples/) as shown below: 
 
-*Repeat as needed*
-
+```
+return (
+    <>
+      <div
+        className={`text-capitalize h1 mb-4 w-100 text-center text-${themeClass}`}
+      >
+        {`${theme || "Default"} Theme`}
+      </div>
+      <div className="btn-group">
+        <button className={`text-capitalize btn btn-${themeClass} btn-lg"`} type="button">
+          {theme ? theme + " theme" : "Choose Theme"}
+        </button>
+        <button
+          type="button"
+          className={`btn btn-lg btn-${themeClass} dropdown-toggle dropdown-toggle-split`}
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <span className="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <div className="dropdown-menu">
+          <a className="dropdown-item" onClick={() => setTheme("primary")}>
+            Primary Theme
+          </a>
+          <a className="dropdown-item" onClick={() => setTheme("danger")}>
+            Danger Theme
+          </a>
+          <a
+            className="dropdown-item" onClick={() => setTheme("success")}>
+            Success Theme
+          </a>
+          <div className="dropdown-divider"></div>
+          <a className="dropdown-item" href="#" onClick={() => resetTheme()}>
+            Default Theme
+          </a>
+        </div>
+      </div>
+```
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Project logo "Issuestack" create by team memeber - Dhruvik Maheshbhai Kakadiya 
