@@ -18,7 +18,17 @@ const Ticket = ({ ticket }) => {
   };
 
   const handleSave = () => {
+    if (selectedCategory === 'Unassigned' || selectedAssignee === 'none') {
+      toast.error('Error: Ticket is unassigned!', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+      });
+    }
     
+    else {
     console.log('Ticket data saved:', {
       id,
       name,
@@ -34,6 +44,7 @@ const Ticket = ({ ticket }) => {
       closeOnClick: true,
       pauseOnHover: true,
     });
+  }
   };
 
   return (
@@ -42,7 +53,7 @@ const Ticket = ({ ticket }) => {
       <p>Ticket ID: {id}</p>
       {category === 'Unassigned' && asignee === 'none' ? (
         <>
-          <p>
+          <p> 
             Category:
             {isEditing ? (
               <select className="form-select" value={selectedCategory} onChange={handleCategoryChange}>
