@@ -1,7 +1,7 @@
 # Assignment1
 
 * *Date Created*: 07 Feb 2024
-* *Last Modification Date*: 07 Feb 2024
+* *Last Modification Date*: 08 Feb 2024
 * *Git URL*: <https://git.cs.dal.ca/kanagaraj/csci-5709-assignments/-/tree/main/Assignment1>
 
 ## Author
@@ -10,10 +10,10 @@
 
 ## Getting Started
 
-* *Deployment URL*:  <https://65c44ef76a320e2715a97ef1--eclectic-sprite-ce8841.netlify.app/>
+* *Deployment URL*:  <https://65c4ef14e5d8350008b474e5--eclectic-sprite-ce8841.netlify.app/>
 * The ticket assignment page has a edit button only when the ticket is unassigned (when system can't automatically assign the ticket).
 * Once edited and assigned to the right category and right agent, the sytem will allow to save with validation message success.
-* If ticket is tried to saved without assigning the right category and agent, the system will not allow to save with validation message error.
+* If ticket is tried to save without assigning the right category or agent, the system will not allow to save with validation message error.
 
 ## Built With
 
