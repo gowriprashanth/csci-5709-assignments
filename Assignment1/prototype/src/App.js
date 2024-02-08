@@ -12,11 +12,13 @@ const tickets = [
 
 function App() {
   return (
-    <div className="App">
-      <h1>Ticket Category and Assignment</h1>
-      <TicketList tickets={tickets} />
+    <div className="app-container"  >
+      <nav className="navbar bg-dark">
+      <h1 className="text text-light">Ticket Category and Assignment</h1>
+      </nav>
+      <TicketList tickets={tickets} /> 
       <ToastContainer />
-    </div>
+   </div>
   );
 }
 

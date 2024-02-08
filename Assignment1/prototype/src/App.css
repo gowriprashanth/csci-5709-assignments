@@ -5,6 +5,20 @@
     justify-content: center;
 }
 
+.text {
+  color: white;
+}
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+  
+}
+
+h1 {
+  color: #1b5b9a; /* Dark text color */
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

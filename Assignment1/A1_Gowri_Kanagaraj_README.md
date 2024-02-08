@@ -10,7 +10,10 @@
 
 ## Getting Started
 
-* *Deployment URL*:  <https://65c438dbf245b41a398ecc45--eclectic-sprite-ce8841.netlify.app/>
+* *Deployment URL*:  <https://65c44ef76a320e2715a97ef1--eclectic-sprite-ce8841.netlify.app/>
+* The ticket assignment page has a edit button only when the ticket is unassigned (when system can't automatically assign the ticket).
+* Once edited and assigned to the right category and right agent, the sytem will allow to save with validation message success.
+* If ticket is tried to saved without assigning the right category and agent, the system will not allow to save with validation message error.
 
 ## Built With
 

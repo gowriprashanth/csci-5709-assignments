@@ -48,8 +48,8 @@ const Ticket = ({ ticket }) => {
   };
 
   return (
-    <div className="ticket card m-3 p-3"> {}
-      <h3 className="mb-3"> {name}</h3>
+    <div className="container m-3 p-3 bg-gradient-dark bg-success text-black"  > {}
+      <h3 className="mb-3 text-info" > {name}</h3>
       <p>Ticket ID: {id}</p>
       {category === 'Unassigned' && asignee === 'none' ? (
         <>
@@ -80,7 +80,7 @@ const Ticket = ({ ticket }) => {
           {isEditing ? (
             <button className="btn btn-primary" onClick={handleSave}>Save</button>
           ) : (
-            <button className="btn btn-secondary" onClick={() => setIsEditing(true)}>Edit</button>
+            <button className="btn btn-outline-info" onClick={() => setIsEditing(true)}>Edit</button>
           )}
         </>
       ) : (
